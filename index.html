@@ -122,7 +122,6 @@
                     <h3 class="font-bold mb-2">Materials</h3>
                     <p class="text-sm text-gray-400">Onyx Carbon Fiber, PA12, J850, Mycelium, Bio-composites</p>
                 </div>
-                <!-- New Management Skill Block -->
                 <div class="p-6 bg-darker rounded-xl border border-white/5 hover:border-primary/50 transition group col-span-2 md:col-span-1">
                     <i class="fa-solid fa-chart-line text-4xl text-gray-500 group-hover:text-primary mb-4 transition"></i>
                     <h3 class="font-bold mb-2">Management</h3>
@@ -205,7 +204,7 @@
                     <div class="h-64 overflow-hidden relative">
                         <!-- [GITHUB IMAGE PLACEHOLDER: Project 4 Card Cover] -->
                         <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="images/scan 1" alt="Pump Lid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="images/Scan 1.png" alt="Pump Lid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-8">
                         <div class="flex gap-2 mb-3">
@@ -256,7 +255,6 @@
             <p class="text-gray-600 text-sm mt-8">© 2026 Mark Nyamu. Designed for the Future.</p>
         </div>
     </section>
-
 
     <!-- ============================================== -->
     <!-- MODALS (Project Detail Views)                  -->
@@ -384,42 +382,78 @@
         </div>
     </div>
 
-    <!-- Modal 4: Pump Lid -->
+    <!-- Modal 4: Pump Lid (STAGGERED LAYOUT) -->
     <div id="modal4" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
         <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
             <button onclick="closeModal('modal4')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- Workflow Image Grid specific to Pump Lid Presentation -->
-            <div class="grid grid-cols-3 gap-1 p-1 bg-darker">
-                <!-- [GITHUB IMAGE PLACEHOLDER: Pump Lid Modal - Image 1 (e.g., Einscan Setup)] -->
-                <img src="images/Scan 1.png" alt="Einscan Capture" class="w-full h-48 object-cover rounded-tl-xl">
-                <!-- [GITHUB IMAGE PLACEHOLDER: Pump Lid Modal - Image 2 (e.g., Fusion 360 Mesh Repair/Splines)] -->
-                <img src="images/Scan 2.png" alt="Mesh Repair" class="w-full h-48 object-cover">
-                <!-- [GITHUB IMAGE PLACEHOLDER: Pump Lid Modal - Image 3 (e.g., Final 'Blowfish' 3D Print)] -->
-                <img src="images/Scan 3.png" alt="Printed Lid" class="w-full h-48 object-cover rounded-tr-xl">
-            </div>
-
-            <div class="p-8 sm:p-10">
-                <div class="mb-6">
-                    <h2 class="text-3xl font-bold mb-2">Reverse Engineering: Aquarium Pump</h2>
-                    <p class="text-primary font-semibold">3D Scanning & Parametric Reconstruction</p>
+            <!-- New Staggered Interior Layout -->
+            <div class="p-8 sm:p-12">
+                
+                <!-- Title Header -->
+                <div class="mb-10 border-b border-white/10 pb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Reverse Engineering: Aquarium Pump</h2>
+                    <p class="text-primary font-semibold tracking-wide">3D Scanning & Parametric Reconstruction</p>
                 </div>
                 
-                <div class="prose prose-invert max-w-none">
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        The objective of this project was to reverse engineer a missing lid for an aquarium aerator. This required a precise scan-to-CAD workflow to ensure the replacement part mated perfectly with the existing complex geometry of the pump base.
-                    </p>
+                <!-- Intro Paragraph -->
+                <p class="text-gray-300 leading-relaxed text-lg mb-12">
+                    The objective of this project was to reverse engineer a missing lid for an aquarium aerator. This required a precise scan-to-CAD workflow to ensure the replacement part mated perfectly with the existing complex geometry of the pump base.
+                </p>
+                
+                <!-- Staggered Sections Container -->
+                <div class="space-y-16">
                     
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">The Workflow</h4>
-                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
-                        <li><strong>Data Acquisition:</strong> Utilized an Einscan SP desktop scanner and turntable. Conducted precise camera calibration and white balancing before capturing the baseline point cloud data of the pump housing.</li>
-                        <li><strong>Mesh Preparation:</strong> Imported the unwatertight model into Fusion 360. Employed the mesh workspace tools to stitch and repair holes, resulting in a clean, workable base trimesh.</li>
-                        <li><strong>Surface Reconstruction:</strong> Used "Create Mesh Section Sketch" to generate 2D profiles at specific planes. These profiles were then utilized to fit curves, generate parametric geometry, and reconstruct the exact mounting footprint (pegs and cutouts) required for the lid.</li>
-                        <li><strong>Design Styling:</strong> Rather than a direct replica, I utilized T-Spline quadballs to design an organic, "blowfish" inspired aesthetic for the upper shell, complete with ventilation holes for the pump motor.</li>
-                        <li><strong>Manufacture:</strong> Handled 6 iterations of rapid prototyping to dial in tolerances. Final part printed using organic supports, resulting in a perfect snap-fit onto the original hardware.</li>
-                    </ul>
+                    <!-- Block 1: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Scan 1] -->
+                            <img src="images/Scan 1.png" alt="Einscan Capture" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">01</span> Data Acquisition
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Utilized an Einscan SP desktop scanner and turntable. Conducted precise camera calibration and white balancing before capturing the baseline point cloud data of the pump housing to ensure maximum dimensional accuracy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 2: Image Right, Text Left -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Scan 2] -->
+                            <img src="images/Scan 2.png" alt="Mesh Repair" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">02</span> Mesh Prep & Reconstruction
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Imported the unwatertight model into Fusion 360. Employed the mesh workspace tools to stitch and repair holes, resulting in a clean base trimesh. Used "Create Mesh Section Sketch" to generate 2D profiles at specific planes, fitting curves to reconstruct the exact mounting footprint required for the lid.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Scan 3] -->
+                            <img src="images/Scan 3.png" alt="Printed Lid" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">03</span> Styling & Manufacture
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Rather than a direct replica, I utilized T-Spline quadballs to design an organic, "blowfish" inspired aesthetic for the upper shell, complete with ventilation holes. Handled 6 iterations of rapid prototyping to dial in tolerances, resulting in a perfect snap-fit.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
