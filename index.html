@@ -410,41 +410,77 @@
         </div>
     </div>
 
-    <!-- Modal 3: Bike Curious -->
+
+    <!-- Modal 3: Bike Curious (STAGGERED LAYOUT) -->
     <div id="modal3" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
         <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
             <button onclick="closeModal('modal3')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <!-- [GITHUB IMAGE PLACEHOLDER: Modal 3 Banner Image (e.g., 1:10 Scale Prototype or CAD)] -->
-            <img src="https://placehold.co/1200x500/0f172a/3b82f6?text=L3E+E-Moped+Concept" alt="Bike Curious" class="w-full h-64 object-cover">
-            <div class="p-8 sm:p-10">
-                <div class="mb-6">
-                    <h2 class="text-3xl font-bold mb-2">Bike Curious: L3E Urban Mobility</h2>
-                    <p class="text-primary font-semibold">Sustainable Vehicle Design & Prototyping</p>
+            
+            <div class="p-8 sm:p-12">
+                <!-- Title Header -->
+                <div class="mb-10 border-b border-white/10 pb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Bike Curious: L3E Urban Mobility</h2>
+                    <p class="text-primary font-semibold tracking-wide">Rapid Prototyping & Iterative Design</p>
                 </div>
                 
-                <div class="prose prose-invert max-w-none">
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        Addressing the gap between underpowered e-bikes and heavy ICE motorcycles, "Bike Curious" is a concept for an L3E class electric moped designed for a 10-mile dual-carriageway commute. The design ethos blends a retro cafe racer aesthetic with cutting-edge sustainable materials.
-                    </p>
+                <!-- Intro Paragraph -->
+                <p class="text-gray-300 leading-relaxed text-lg mb-12">
+                    The "Rapid prototyping coursework 25938962.pdf" details the creation of "Bike Curious," an L3E class electric moped designed to bridge the gap between 15.5 mph e-bikes and heavy ICE motorcycles for a 10-mile urban commute[cite: 1]. The development heavily emphasized iterative digital design, troubleshooting, and rapid physical prototyping[cite: 1].
+                </p>
+                
+                <!-- Staggered Sections Container -->
+                <div class="space-y-16">
                     
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Bio-Based Material Innovation</h4>
-                    <p class="text-gray-300 leading-relaxed mb-4">To ensure exemption from zero-emission zone regulations and achieve true carbon neutrality, the vehicle architecture proposes:</p>
-                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
-                        <li><strong>Body:</strong> Flax fiber composite (100% biodegradable, 85% lower CO2 emissions than carbon fiber).</li>
-                        <li><strong>Frame:</strong> Hydro Circal 100R Aluminum (100% scrap, 95% less energy to produce).</li>
-                        <li><strong>Seat:</strong> Mycelium leather (Higher tensile strength than cowhide, fraction of the CO2 footprint).</li>
-                        <li><strong>Battery:</strong> Lignin anode solid-state battery (Bio-negative byproduct, 3x faster charging).</li>
-                        <li><strong>Tires:</strong> Russian Dandelion rubber (Decoupling from SE Asian deforestation).</li>
-                    </ul>
+                    <!-- Block 1: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Bike Curious - CAD Model & Vizcom] -->
+                            <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Vizcom+AI+&+CAD+Model" alt="CAD and AI Ideation" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">01</span> AI-Assisted Ideation & CAD
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Initial concepts were generated using Vizcom AI with prompts like "A futuristic yet retro inspired light electric motorbike," taking inspiration from the Yamaha SR400[cite: 1]. The AI-generated side profile was imported as a canvas into Autodesk Fusion[cite: 1]. The digital model was constructed using form tools, splines, and extruded cuts, incorporating intricate details like embossed tire marks on the wheels and a custom battery casing engineered with a -0.02mm offset for a precise, snug mechanical fit[cite: 1].
+                            </p>
+                        </div>
+                    </div>
 
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Rapid Prototyping Process</h4>
-                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
-                        <li>Iterative ideation translated from rough concepts to Vizcom AI renders, and finally to Fusion 360 solid modeling.</li>
-                        <li>Utilized a Prusa i3 MK3 for scaled prototyping. Early prints failed due to z-axis height and thin features (spaghettiing), which informed design adjustments.</li>
-                        <li>Optimized print settings: split models to eliminate supports, utilized organic supports where necessary, and applied top-surface ironing (10% flow rate) for a premium post-processed finish.</li>
-                    </ul>
+                    <!-- Block 2: Image Right, Text Left -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Bike Curious - Failed Print/Spaghetti] -->
+                            <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Failed+FDM+Prints" alt="Prototyping Failures" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">02</span> Prototyping Failures & Iteration
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Early FDM prototyping revealed several structural and mechanical flaws[cite: 1]. Initial prints suffered from severe "spaghettiing" because the nozzle Z-axis was calibrated too high, drastically weakening layer adhesion[cite: 1]. Subsequent print attempts experienced warping and layer shifts, likely caused by the nozzle colliding with the physical print mid-operation[cite: 1]. Additionally, the first completed physical model featured handlebars that were too thin, causing them to break under normal handling, prompting a structural redesign[cite: 1].
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Bike Curious - Final Print Assembly] -->
+                            <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Final+Optimized+Print" alt="Final Assembly" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">03</span> Print Optimization & Assembly
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                To resolve persistent printability issues, the CAD model was split into two halves joined by internal pins and pinholes, which completely eliminated the need for major support structures[cite: 1]. For the battery holder overhangs, organic supports were painted on to minimize material waste[cite: 1]. The final model was printed using a 0.6mm nozzle at a 0.3mm layer height, yielding a rapid 3.35-hour production time[cite: 1]. The surface finish was drastically improved by reducing the ironing flow rate from 15% to 10% to prevent over-extrusion, and by slowing external perimeter printing speeds to 20mm/s[cite: 1].
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
