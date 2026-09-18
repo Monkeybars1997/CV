@@ -260,83 +260,151 @@
     <!-- MODALS (Project Detail Views)                  -->
     <!-- ============================================== -->
 
-    <!-- Modal 1: Aerospace Bracket -->
+    <!-- Modal 1: Aerospace Bracket (STAGGERED LAYOUT) -->
     <div id="modal1" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
         <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
             <button onclick="closeModal('modal1')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <!-- [GITHUB IMAGE PLACEHOLDER: Modal 1 Banner Image] -->
-            <img src="https://placehold.co/1200x500/0f172a/3b82f6?text=Bracket+Generative+Design+Render" alt="Bracket" class="w-full h-64 object-cover">
-            <div class="p-8 sm:p-10">
-                <div class="mb-6">
-                    <h2 class="text-3xl font-bold mb-2">Aerospace Seat Bracket Optimization</h2>
-                    <p class="text-primary font-semibold">Additive Manufacturing & Generative Design</p>
+            
+            <div class="p-8 sm:p-12">
+                <!-- Title Header -->
+                <div class="mb-10 border-b border-white/10 pb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Aerospace Seat Bracket Optimization</h2>
+                    <p class="text-primary font-semibold tracking-wide">Additive Manufacturing & Generative Design</p>
                 </div>
                 
-                <div class="prose prose-invert max-w-none">
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        The aerospace industry requires lightweight, high-complexity components to reduce fuel consumption and emissions. This project sought to replace a traditional, overengineered solid aluminum seat bracket (163.85g) with an optimized 3D-printed alternative.
-                    </p>
+                <!-- Intro Paragraph -->
+                <p class="text-gray-300 leading-relaxed text-lg mb-12">
+                    The aerospace industry requires lightweight, high-complexity components to reduce fuel consumption and emissions. This project sought to replace a traditional, overengineered solid aluminum seat bracket (163.85g) with an optimized 3D-printed alternative.
+                </p>
+                
+                <!-- Staggered Sections Container -->
+                <div class="space-y-16">
                     
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Methodology</h4>
-                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
-                        <li><strong>Material Evaluation:</strong> Conducted empirical tensile and flexural testing comparing FDM (Markforged Onyx Carbon), SLS (Nylon PA12), and Material Jetting (J850 Tough). Onyx Carbon proved superior with an ultimate tensile strength of 104.02 MPa and flexural modulus of 5.89 GPa.</li>
-                        <li><strong>Generative Design:</strong> Utilized Autodesk Fusion to define preserve geometries (bolt holes) and obstacle regions. Applied a safety factor constraint of 2 and loads simulating both upright (150N) and reclined (200N) passenger positions.</li>
-                        <li><strong>FEA Validation:</strong> Executed mesh-independent static stress studies to validate the generated organic form, ensuring sub-5mm maximum displacement constraints were met.</li>
-                    </ul>
+                    <!-- Block 1: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Bracket Modal - Image 1] -->
+                            <img src="images/Bracket 1.png" alt="Material Testing" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">01</span> Material Evaluation
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Conducted empirical tensile and flexural testing comparing FDM (Markforged Onyx Carbon), SLS (Nylon PA12), and Material Jetting (J850 Tough). Onyx Carbon proved superior with an ultimate tensile strength of 104.02 MPa and flexural modulus of 5.89 GPa.
+                            </p>
+                        </div>
+                    </div>
 
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Results & Impact</h4>
-                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
-                        <li><strong>92.5% Weight Reduction:</strong> Final printed Onyx component weighed just 12.3g compared to the original 168.3g aluminum part.</li>
-                        <li><strong>Physical Validation:</strong> Physical testing yielded a safety factor of 3.62, outperforming digital FEA predictions and ensuring real-world safety.</li>
-                        <li><strong>Sustainability:</strong> A Granta Eco-Audit projected a <strong>99.2% reduction</strong> in lifecycle carbon emissions, fuel costs, and energy consumption over a 20-year aircraft lifespan.</li>
-                    </ul>
+                    <!-- Block 2: Image Right, Text Left -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Bracket Modal - Image 2] -->
+                            <img src="images/Bracket 2.png" alt="Generative Design" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">02</span> Generative Setup & FEA
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Utilized Autodesk Fusion to define preserve geometries (bolt holes) and obstacle regions. Applied a safety factor constraint of 2.0 and loads simulating both upright (150N) and reclined (200N) passenger positions. Executed mesh-independent static stress studies to validate the generated organic form.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: Bracket Modal - Image 3] -->
+                            <img src="images/Bracket 3.png" alt="Final Part" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">03</span> Results & Sustainability
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                The final printed Onyx component weighed just 12.3g, achieving a 92.5% reduction compared to the original 168.3g aluminum part. A Granta Eco-Audit projected a 99.2% reduction in lifecycle carbon emissions over a 20-year aircraft lifespan, with physical testing yielding a safety factor of 3.62.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2: VR Headset -->
+    <!-- Modal 2: VR Headset (STAGGERED LAYOUT) -->
     <div id="modal2" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
         <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
             <button onclick="closeModal('modal2')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <!-- Workflow Image Grid specific to VR Headset Presentation -->
-            <div class="grid grid-cols-3 gap-1 p-1 bg-darker">
-                <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 1 (e.g., Digital Twin Fusion/Scan)] -->
-                <img src="images/Take 1.png" class="w-full h-48 object-cover rounded-tl-xl">
-                <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 2 (e.g., Generative Setup Loads/Obstacles)] -->
-                <img src="images/Take 2.png" alt="Generative Setup" class="w-full h-48 object-cover">
-                <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 3 (e.g., Final VR Headset Design)] -->
-                <img src="images/Take 3.png" alt="Final Design" class="w-full h-48 object-cover rounded-tr-xl">
-            </div>
-
-            <div class="p-8 sm:p-10">
-                <div class="mb-6">
-                    <h2 class="text-3xl font-bold mb-2">Bespoke VR Headset Architecture</h2>
-                    <p class="text-primary font-semibold">Spatial Computing & Ergonomics</p>
+            <div class="p-8 sm:p-12">
+                <!-- Title Header -->
+                <div class="mb-10 border-b border-white/10 pb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Bespoke VR Headset Architecture</h2>
+                    <p class="text-primary font-semibold tracking-wide">Spatial Computing & Ergonomics</p>
                 </div>
                 
-                <div class="prose prose-invert max-w-none">
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        Standard VR head straps frequently fail to accommodate afro-textured hair, causing severe ergonomic discomfort and texture compression. Inspired by the "over the top" design philosophy, this project aimed to create a bespoke, collision-aware VR headset mount tailored for a Pixel 8 Pro device.
-                    </p>
+                <!-- Intro Paragraph -->
+                <p class="text-gray-300 leading-relaxed text-lg mb-12">
+                    Standard VR head straps frequently fail to accommodate afro-textured hair, causing severe ergonomic discomfort and texture compression. Inspired by the "over the top" design philosophy, this project aimed to create a bespoke, collision-aware VR headset mount tailored for a Pixel 8 Pro device.
+                </p>
+                
+                <!-- Staggered Sections Container -->
+                <div class="space-y-16">
                     
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">The Digital Twin Workflow</h4>
-                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
-                        <li><strong>Dual-Modality Scanning:</strong> Utilized an Artec Leo to capture highly accurate rigid skeletal geometry (face and forehead) for precise contact pad data. Simultaneously used Kiri Engine (Photogrammetry) to capture the volumetric boundary of the hair, which structured light typically misses.</li>
-                        <li><strong>Data Fusion:</strong> Aligned and merged both meshes within Fusion 360 to create a holistic, collision-aware digital twin of the user's head.</li>
-                        <li><strong>Spatial Ideation:</strong> Initial concepting and spatial layout were conducted in VR using Gravity Sketch.</li>
-                        <li><strong>Optical Engineering & DFA:</strong> Designed precise 15mm offsets between the user's eyes and the optical lenses. Incorporated specific Design for Assembly (DFA) features for mounting the mobile device.</li>
-                    </ul>
+                    <!-- Block 1: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 1] -->
+                            <img src="images/Take 1.png" alt="Digital Twin Scan" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">01</span> Dual-Modality Scanning
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Utilized an Artec Leo to capture highly accurate rigid skeletal geometry (face and forehead) for precise contact pad data. Simultaneously used Kiri Engine (Photogrammetry) to capture the volumetric boundary of the hair. Both meshes were then aligned and merged within Fusion 360 to create a holistic, collision-aware digital twin.
+                            </p>
+                        </div>
+                    </div>
 
-                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Generative Realization</h4>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        In Fusion 360's generative environment, preserves were set for the lens frames, head pads, and phone clips. The face, visual path, and hair volume were set as strict obstacle geometries. Applying a 5N downward load (SF 2.0) allowed the AI solver to generate an organic, lightweight cantilever structure that perfectly avoids hair compression while securely holding the device at the correct focal length.
-                    </p>
+                    <!-- Block 2: Image Right, Text Left -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 2] -->
+                            <img src="images/Take 2.png" alt="Generative Setup" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">02</span> Spatial Ideation & DFA
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Initial concepting and spatial layout were conducted in VR using Gravity Sketch to ensure intuitive form finding. Following this, precise 15mm offsets were optically engineered between the user's eyes and the lenses, incorporating specific Design for Assembly (DFA) features for securely mounting the mobile device.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                            <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 3] -->
+                            <img src="images/Take 3.png" alt="Final Design" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">03</span> Generative Realization
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                In Fusion 360's generative environment, preserves were set for the lens frames, head pads, and phone clips. The face, visual path, and hair volume acted as strict obstacle geometries. Applying a 5N downward load allowed the AI solver to generate an organic, lightweight cantilever structure that perfectly avoids hair compression.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
