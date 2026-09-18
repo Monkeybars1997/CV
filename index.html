@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Nyamu | Digital Design & Manufacturing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6', // Blue
+                        dark: '#0f172a',    // Slate 900
+                        darker: '#020617',  // Slate 950
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        
+        /* Modal Animation */
+        .modal-enter { opacity: 0; transform: scale(0.95); }
+        .modal-enter-active { opacity: 1; transform: scale(1); transition: opacity 300ms, transform 300ms; }
+        .modal-exit { opacity: 1; transform: scale(1); }
+        .modal-exit-active { opacity: 0; transform: scale(0.95); transition: opacity 300ms, transform 300ms; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-40 top-0 bg-darker/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-xl tracking-wider">
+                    MN<span class="text-primary">.</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-primary transition">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-primary transition">Skills</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-primary transition">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-primary transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 pr-8">
+                <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Portfolio 2026</h2>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">Mark Nyamu.</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                    An MSc Digital Design and Manufacturing engineer bridging the gap between advanced generative algorithms, sustainable materials, and physical reality. 
+                </p>
+                <div class="flex gap-4">
+                    <a href="#portfolio" class="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full transition shadow-lg shadow-primary/30">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border border-gray-600 hover:border-gray-400 text-white font-semibold py-3 px-8 rounded-full transition">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/3 mt-12 md:mt-0">
+                <!-- [GITHUB IMAGE PLACEHOLDER: Profile Picture] -->
+                <!-- Replace 'src' below with your profile picture path, e.g., src="./images/profile.jpg" -->
+                <div class="relative w-64 h-64 mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary to-cyan-400 rounded-full blur-2xl opacity-20"></div>
+                    <img src="https://placehold.co/400x400/1e293b/ffffff?text=Mark+Nyamu" alt="Mark Nyamu" class="relative rounded-full border-4 border-dark shadow-2xl object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Technical Arsenal</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="p-6 bg-darker rounded-xl border border-white/5 hover:border-primary/50 transition group">
+                    <i class="fa-solid fa-microchip text-4xl text-gray-500 group-hover:text-primary mb-4 transition"></i>
+                    <h3 class="font-bold mb-2">Hardware & Tech</h3>
+                    <p class="text-sm text-gray-400">Markforged X7, Prusa i3 MK3, Artec Leo, Einscan SP</p>
+                </div>
+                <div class="p-6 bg-darker rounded-xl border border-white/5 hover:border-primary/50 transition group">
+                    <i class="fa-solid fa-cubes text-4xl text-gray-500 group-hover:text-primary mb-4 transition"></i>
+                    <h3 class="font-bold mb-2">Software</h3>
+                    <p class="text-sm text-gray-400">Fusion 360, Granta EduPack, Gravity Sketch, Exocad</p>
+                </div>
+                <div class="p-6 bg-darker rounded-xl border border-white/5 hover:border-primary/50 transition group">
+                    <i class="fa-solid fa-network-wired text-4xl text-gray-500 group-hover:text-primary mb-4 transition"></i>
+                    <h3 class="font-bold mb-2">Methodologies</h3>
+                    <p class="text-sm text-gray-400">Generative Design, FEA Simulation, Reverse Engineering</p>
+                </div>
+                <div class="p-6 bg-darker rounded-xl border border-white/5 hover:border-primary/50 transition group">
+                    <i class="fa-solid fa-leaf text-4xl text-gray-500 group-hover:text-primary mb-4 transition"></i>
+                    <h3 class="font-bold mb-2">Materials</h3>
+                    <p class="text-sm text-gray-400">Onyx Carbon Fiber, PA12, J850, Mycelium, Bio-composites</p>
+                </div>
+                <!-- New Management Skill Block -->
+                <div class="p-6 bg-darker rounded-xl border border-white/5 hover:border-primary/50 transition group col-span-2 md:col-span-1">
+                    <i class="fa-solid fa-chart-line text-4xl text-gray-500 group-hover:text-primary mb-4 transition"></i>
+                    <h3 class="font-bold mb-2">Management</h3>
+                    <p class="text-sm text-gray-400">Lean Six Sigma, ERP, ISO 9001/14001, APM Compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-16 md:flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
+                    <div class="w-16 h-1 bg-primary rounded mb-4"></div>
+                    <p class="text-gray-400 max-w-2xl">A selection of my recent work focusing on generative algorithms, sustainability, and advanced manufacturing.</p>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openModal('modal1')">
+                    <div class="h-64 overflow-hidden relative">
+                        <!-- [GITHUB IMAGE PLACEHOLDER: Project 1 Card Cover] -->
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Generative+Aerospace+Bracket" alt="Aerospace Bracket" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-primary/20 text-primary rounded-md">Generative Design</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 rounded-md">FEA</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Aerospace Seat Bracket Optimization</h3>
+                        <p class="text-gray-400 text-sm mb-4">Achieved a 92.5% component weight reduction using Autodesk Fusion Generative Design and Onyx Carbon Fiber.</p>
+                        <span class="text-primary text-sm font-semibold group-hover:underline">Read Case Study <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openModal('modal2')">
+                    <div class="h-64 overflow-hidden relative">
+                        <!-- [GITHUB IMAGE PLACEHOLDER: Project 2 Card Cover] -->
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Bespoke+VR+Headset" alt="VR Headset" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-primary/20 text-primary rounded-md">3D Scanning</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 rounded-md">Ergonomics</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Bespoke VR Headset Architecture</h3>
+                        <p class="text-gray-400 text-sm mb-4">A digital twin approach to solving ergonomic flaws in VR headsets for afro-textured hair using Artec Leo and photogrammetry.</p>
+                        <span class="text-primary text-sm font-semibold group-hover:underline">Read Case Study <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openModal('modal3')">
+                    <div class="h-64 overflow-hidden relative">
+                        <!-- [GITHUB IMAGE PLACEHOLDER: Project 3 Card Cover] -->
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Bike+Curious+L3E" alt="Bike Curious" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-primary/20 text-primary rounded-md">Rapid Prototyping</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 rounded-md">Sustainability</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Bike Curious: L3E Urban Mobility</h3>
+                        <p class="text-gray-400 text-sm mb-4">Design and rapid prototyping of a sustainable E-moped utilizing mycelium leather, flax fiber, and solid-state lignin batteries.</p>
+                        <span class="text-primary text-sm font-semibold group-hover:underline">Read Case Study <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openModal('modal4')">
+                    <div class="h-64 overflow-hidden relative">
+                        <!-- [GITHUB IMAGE PLACEHOLDER: Project 4 Card Cover] -->
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Reverse+Engineering" alt="Pump Lid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-primary/20 text-primary rounded-md">Reverse Engineering</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 rounded-md">FDM Printing</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Reverse Engineering: Aquarium Pump</h3>
+                        <p class="text-gray-400 text-sm mb-4">End-to-end workflow utilizing Einscan SP point-cloud data to digitally reconstruct and physically manufacture a functional replacement part.</p>
+                        <span class="text-primary text-sm font-semibold group-hover:underline">Read Case Study <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <!-- Project 5: Management -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 group cursor-pointer hover:-translate-y-2 transition duration-300 md:col-span-2 flex flex-col md:flex-row" onclick="openModal('modal5')">
+                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
+                        <!-- [GITHUB IMAGE PLACEHOLDER: Project 5 Strategy Graphic or Stock Image] -->
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/800x600/1e293b/3b82f6?text=Digital+Transformation+Strategy" alt="Digital Strategy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8 md:w-3/5 flex flex-col justify-center">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs font-semibold px-2 py-1 bg-primary/20 text-primary rounded-md">Lean Six Sigma</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 rounded-md">Systems Thinking</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Enterprise Digital Transformation</h3>
+                        <p class="text-gray-400 text-sm mb-4">A comprehensive strategic framework developed to transition a legacy engineering SME from reactive ad-hoc maintenance to a proactive, highly profitable entity using IoT and ERP systems.</p>
+                        <span class="text-primary text-sm font-semibold group-hover:underline">View Strategy Highlights <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-20 border-t border-white/10 bg-dark">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Let's Build the Future</h2>
+            <p class="text-gray-400 mb-8">I am currently looking for new opportunities in digital design, additive manufacturing, and product engineering. Whether you have a question or just want to say hi, my inbox is always open.</p>
+            <a href="mailto:markcollinsnyamu@gmail.com" class="inline-block bg-primary hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full transition shadow-lg shadow-primary/30">
+                Say Hello
+            </a>
+            <div class="mt-16 flex justify-center space-x-6">
+                <!-- Add actual links here -->
+                <a href="#" class="text-gray-500 hover:text-white transition text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white transition text-2xl"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm mt-8">© 2026 Mark Nyamu. Designed for the Future.</p>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- MODALS (Project Detail Views)                  -->
+    <!-- ============================================== -->
+
+    <!-- Modal 1: Aerospace Bracket -->
+    <div id="modal1" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <!-- [GITHUB IMAGE PLACEHOLDER: Modal 1 Banner Image] -->
+            <img src="https://placehold.co/1200x500/0f172a/3b82f6?text=Bracket+Generative+Design+Render" alt="Bracket" class="w-full h-64 object-cover">
+            <div class="p-8 sm:p-10">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold mb-2">Aerospace Seat Bracket Optimization</h2>
+                    <p class="text-primary font-semibold">Additive Manufacturing & Generative Design</p>
+                </div>
+                
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        The aerospace industry requires lightweight, high-complexity components to reduce fuel consumption and emissions. This project sought to replace a traditional, overengineered solid aluminum seat bracket (163.85g) with an optimized 3D-printed alternative.
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Methodology</h4>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li><strong>Material Evaluation:</strong> Conducted empirical tensile and flexural testing comparing FDM (Markforged Onyx Carbon), SLS (Nylon PA12), and Material Jetting (J850 Tough). Onyx Carbon proved superior with an ultimate tensile strength of 104.02 MPa and flexural modulus of 5.89 GPa.</li>
+                        <li><strong>Generative Design:</strong> Utilized Autodesk Fusion to define preserve geometries (bolt holes) and obstacle regions. Applied a safety factor constraint of 2 and loads simulating both upright (150N) and reclined (200N) passenger positions.</li>
+                        <li><strong>FEA Validation:</strong> Executed mesh-independent static stress studies to validate the generated organic form, ensuring sub-5mm maximum displacement constraints were met.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Results & Impact</h4>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li><strong>92.5% Weight Reduction:</strong> Final printed Onyx component weighed just 12.3g compared to the original 168.3g aluminum part.</li>
+                        <li><strong>Physical Validation:</strong> Physical testing yielded a safety factor of 3.62, outperforming digital FEA predictions and ensuring real-world safety.</li>
+                        <li><strong>Sustainability:</strong> A Granta Eco-Audit projected a <strong>99.2% reduction</strong> in lifecycle carbon emissions, fuel costs, and energy consumption over a 20-year aircraft lifespan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: VR Headset -->
+    <div id="modal2" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal2')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <!-- Workflow Image Grid specific to VR Headset Presentation -->
+            <div class="grid grid-cols-3 gap-1 p-1 bg-darker">
+                <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 1 (e.g., Digital Twin Fusion/Scan)] -->
+                <img src="https://placehold.co/400x300/0f172a/3b82f6?text=Digital+Twin+Scan" alt="Digital Twin" class="w-full h-48 object-cover rounded-tl-xl">
+                <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 2 (e.g., Generative Setup Loads/Obstacles)] -->
+                <img src="https://placehold.co/400x300/0f172a/3b82f6?text=Generative+Setup" alt="Generative Setup" class="w-full h-48 object-cover">
+                <!-- [GITHUB IMAGE PLACEHOLDER: VR Modal - Image 3 (e.g., Final VR Headset Design)] -->
+                <img src="https://placehold.co/400x300/0f172a/3b82f6?text=Final+Generated+Design" alt="Final Design" class="w-full h-48 object-cover rounded-tr-xl">
+            </div>
+
+            <div class="p-8 sm:p-10">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold mb-2">Bespoke VR Headset Architecture</h2>
+                    <p class="text-primary font-semibold">Spatial Computing & Ergonomics</p>
+                </div>
+                
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Standard VR head straps frequently fail to accommodate afro-textured hair, causing severe ergonomic discomfort and texture compression. Inspired by the "over the top" design philosophy, this project aimed to create a bespoke, collision-aware VR headset mount tailored for a Pixel 8 Pro device.
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">The Digital Twin Workflow</h4>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li><strong>Dual-Modality Scanning:</strong> Utilized an Artec Leo to capture highly accurate rigid skeletal geometry (face and forehead) for precise contact pad data. Simultaneously used Kiri Engine (Photogrammetry) to capture the volumetric boundary of the hair, which structured light typically misses.</li>
+                        <li><strong>Data Fusion:</strong> Aligned and merged both meshes within Fusion 360 to create a holistic, collision-aware digital twin of the user's head.</li>
+                        <li><strong>Spatial Ideation:</strong> Initial concepting and spatial layout were conducted in VR using Gravity Sketch.</li>
+                        <li><strong>Optical Engineering & DFA:</strong> Designed precise 15mm offsets between the user's eyes and the optical lenses. Incorporated specific Design for Assembly (DFA) features for mounting the mobile device.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Generative Realization</h4>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        In Fusion 360's generative environment, preserves were set for the lens frames, head pads, and phone clips. The face, visual path, and hair volume were set as strict obstacle geometries. Applying a 5N downward load (SF 2.0) allowed the AI solver to generate an organic, lightweight cantilever structure that perfectly avoids hair compression while securely holding the device at the correct focal length.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Bike Curious -->
+    <div id="modal3" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal3')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <!-- [GITHUB IMAGE PLACEHOLDER: Modal 3 Banner Image (e.g., 1:10 Scale Prototype or CAD)] -->
+            <img src="https://placehold.co/1200x500/0f172a/3b82f6?text=L3E+E-Moped+Concept" alt="Bike Curious" class="w-full h-64 object-cover">
+            <div class="p-8 sm:p-10">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold mb-2">Bike Curious: L3E Urban Mobility</h2>
+                    <p class="text-primary font-semibold">Sustainable Vehicle Design & Prototyping</p>
+                </div>
+                
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Addressing the gap between underpowered e-bikes and heavy ICE motorcycles, "Bike Curious" is a concept for an L3E class electric moped designed for a 10-mile dual-carriageway commute. The design ethos blends a retro cafe racer aesthetic with cutting-edge sustainable materials.
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Bio-Based Material Innovation</h4>
+                    <p class="text-gray-300 leading-relaxed mb-4">To ensure exemption from zero-emission zone regulations and achieve true carbon neutrality, the vehicle architecture proposes:</p>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li><strong>Body:</strong> Flax fiber composite (100% biodegradable, 85% lower CO2 emissions than carbon fiber).</li>
+                        <li><strong>Frame:</strong> Hydro Circal 100R Aluminum (100% scrap, 95% less energy to produce).</li>
+                        <li><strong>Seat:</strong> Mycelium leather (Higher tensile strength than cowhide, fraction of the CO2 footprint).</li>
+                        <li><strong>Battery:</strong> Lignin anode solid-state battery (Bio-negative byproduct, 3x faster charging).</li>
+                        <li><strong>Tires:</strong> Russian Dandelion rubber (Decoupling from SE Asian deforestation).</li>
+                    </ul>
+
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">Rapid Prototyping Process</h4>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li>Iterative ideation translated from rough concepts to Vizcom AI renders, and finally to Fusion 360 solid modeling.</li>
+                        <li>Utilized a Prusa i3 MK3 for scaled prototyping. Early prints failed due to z-axis height and thin features (spaghettiing), which informed design adjustments.</li>
+                        <li>Optimized print settings: split models to eliminate supports, utilized organic supports where necessary, and applied top-surface ironing (10% flow rate) for a premium post-processed finish.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Pump Lid -->
+    <div id="modal4" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal4')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Workflow Image Grid specific to Pump Lid Presentation -->
+            <div class="grid grid-cols-3 gap-1 p-1 bg-darker">
+                <!-- [GITHUB IMAGE PLACEHOLDER: Pump Lid Modal - Image 1 (e.g., Einscan Setup)] -->
+                <img src="https://placehold.co/400x300/0f172a/3b82f6?text=Einscan+Data+Capture" alt="Einscan Capture" class="w-full h-48 object-cover rounded-tl-xl">
+                <!-- [GITHUB IMAGE PLACEHOLDER: Pump Lid Modal - Image 2 (e.g., Fusion 360 Mesh Repair/Splines)] -->
+                <img src="https://placehold.co/400x300/0f172a/3b82f6?text=Fusion+360+Mesh+Repair" alt="Mesh Repair" class="w-full h-48 object-cover">
+                <!-- [GITHUB IMAGE PLACEHOLDER: Pump Lid Modal - Image 3 (e.g., Final 'Blowfish' 3D Print)] -->
+                <img src="https://placehold.co/400x300/0f172a/3b82f6?text=Final+3D+Printed+Lid" alt="Printed Lid" class="w-full h-48 object-cover rounded-tr-xl">
+            </div>
+
+            <div class="p-8 sm:p-10">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold mb-2">Reverse Engineering: Aquarium Pump</h2>
+                    <p class="text-primary font-semibold">3D Scanning & Parametric Reconstruction</p>
+                </div>
+                
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        The objective of this project was to reverse engineer a missing lid for an aquarium aerator. This required a precise scan-to-CAD workflow to ensure the replacement part mated perfectly with the existing complex geometry of the pump base.
+                    </p>
+                    
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2">The Workflow</h4>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li><strong>Data Acquisition:</strong> Utilized an Einscan SP desktop scanner and turntable. Conducted precise camera calibration and white balancing before capturing the baseline point cloud data of the pump housing.</li>
+                        <li><strong>Mesh Preparation:</strong> Imported the unwatertight model into Fusion 360. Employed the mesh workspace tools to stitch and repair holes, resulting in a clean, workable base trimesh.</li>
+                        <li><strong>Surface Reconstruction:</strong> Used "Create Mesh Section Sketch" to generate 2D profiles at specific planes. These profiles were then utilized to fit curves, generate parametric geometry, and reconstruct the exact mounting footprint (pegs and cutouts) required for the lid.</li>
+                        <li><strong>Design Styling:</strong> Rather than a direct replica, I utilized T-Spline quadballs to design an organic, "blowfish" inspired aesthetic for the upper shell, complete with ventilation holes for the pump motor.</li>
+                        <li><strong>Manufacture:</strong> Handled 6 iterations of rapid prototyping to dial in tolerances. Final part printed using organic supports, resulting in a perfect snap-fit onto the original hardware.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Management Strategy -->
+    <div id="modal5" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="bg-dark border border-white/10 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal5')" class="absolute top-4 right-4 bg-darker hover:bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="bg-gradient-to-r from-slate-800 to-dark p-12 text-center border-b border-white/10">
+                <i class="fa-solid fa-sitemap text-6xl text-primary mb-4 shadow-lg"></i>
+                <h2 class="text-4xl font-bold mb-2">Digital Transformation & Strategy</h2>
+                <p class="text-gray-400">Engineering Management, Ethics, and Systems Thinking</p>
+            </div>
+            <div class="p-8 sm:p-10">
+                
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-gray-300 leading-relaxed mb-8 text-lg">
+                        Engineering extends beyond designing physical parts; it requires building the robust frameworks that allow those parts to be manufactured sustainably, profitably, and ethically. This project details a comprehensive management overhaul for an established SME operating on the brink of insolvency due to outdated, reactive protocols.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-darker p-6 rounded-xl border border-white/5">
+                            <h4 class="text-xl font-bold mb-3 text-white flex items-center"><i class="fa-solid fa-gears text-primary mr-3"></i> Lean Six Sigma & IoT</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Analyzed £50,000+ per-intervention reactive maintenance costs. Proposed a structural transition using the DMAIC framework to standardize protocols. Architected a system utilizing Industry 4.0 IoT sensors linked to an automated ERP system to trigger Just-In-Time (JIT) logistics and predictive maintenance, cutting operational waste and lead times.
+                            </p>
+                        </div>
+                        <div class="bg-darker p-6 rounded-xl border border-white/5">
+                            <h4 class="text-xl font-bold mb-3 text-white flex items-center"><i class="fa-solid fa-users-gear text-primary mr-3"></i> Change Management</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Implementing digital workflows in a 30-year legacy business risks severe cultural shock. Applied Kotter’s 8-Step Change Model to navigate internal resistance, upskill legacy employees, and transition operations seamlessly while aligning the new structure with ISO 9001 (Quality) and ISO 14001 (Environmental) standards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-bold mb-3 border-b border-white/10 pb-2 mt-8">Ethical Procurement & Regulatory Compliance</h4>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Alongside operational efficiency, modern engineering management demands rigorous ethical standards. Modeled complex ethical dilemmas occurring in million-pound tendering environments to establish compliant procurement workflows:
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+                        <li><strong>Anti-Corruption Frameworks:</strong> Designed protocols adhering strictly to the UK Bribery Act 2010 (Section 2 & 7), mitigating risks of unmerited financial advantages that endanger contractor safety and corporate liability.</li>
+                        <li><strong>Professional Accountability:</strong> Embedded requirements aligned with the APM Code of Professional Conduct and UK-SPEC (Engineering Council). Engineered solutions like isolated Common Data Environments (CDE) to eliminate off-channel communications and protect junior engineers from decision fatigue and emotional manipulation during vendor selection.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple JavaScript for Modals -->
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            // Small delay to allow display block to apply before animating opacity
+            setTimeout(() => {
+                modal.firstElementChild.classList.add('modal-enter-active');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.firstElementChild.classList.remove('modal-enter-active');
+            modal.firstElementChild.classList.add('modal-exit-active');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.firstElementChild.classList.remove('modal-exit-active');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modals = document.querySelectorAll('[id^="modal"]');
+                modals.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        closeModal(modal.id);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
