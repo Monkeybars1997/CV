@@ -427,7 +427,7 @@
                 
                 <!-- Intro Paragraph -->
                 <p class="text-gray-300 leading-relaxed text-lg mb-12">
-                    The "Rapid prototyping coursework 25938962.pdf" details the creation of "Bike Curious," an L3E class electric moped designed to bridge the gap between 15.5 mph e-bikes and heavy ICE motorcycles for a 10-mile urban commute[cite: 1]. The development heavily emphasized iterative digital design, troubleshooting, and rapid physical prototyping[cite: 1].
+                    The "Rapid prototyping coursework 25938962.pdf" details the creation of "Bike Curious," an L3E class electric moped designed to bridge the gap between 15.5 mph e-bikes and heavy ICE motorcycles for a 10-mile urban commute. The development heavily emphasized iterative digital design, troubleshooting, and rapid physical prototyping.
                 </p>
                 
                 <!-- Staggered Sections Container -->
@@ -436,18 +436,55 @@
                     <!-- Block 1: Image Left, Text Right -->
                     <div class="flex flex-col md:flex-row items-center gap-8 group">
                         <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
-                            <!-- [GITHUB IMAGE PLACEHOLDER: Bike Curious - CAD Model & Vizcom] -->
-                            <img src="images/emoped 2.png" alt="CAD and AI Ideation" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                            <!-- Added transform-gpu, block, and %20 for spaces -->
+                            <img src="images/emoped%202.png" alt="CAD and AI Ideation" class="w-full h-auto block object-cover transform-gpu group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="md:w-1/2">
                             <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
                                 <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">01</span> AI-Assisted Ideation & CAD
                             </h4>
                             <p class="text-gray-400 leading-relaxed">
-                                Initial concepts were generated using Vizcom AI with prompts like "A futuristic yet retro inspired light electric motorbike," taking inspiration from the Yamaha SR400[cite: 1]. The AI-generated side profile was imported as a canvas into Autodesk Fusion[cite: 1]. The digital model was constructed using form tools, splines, and extruded cuts, incorporating intricate details like embossed tire marks on the wheels and a custom battery casing engineered with a -0.02mm offset for a precise, snug mechanical fit[cite: 1].
+                                Initial concepts were generated using Vizcom AI with prompts like "A futuristic yet retro inspired light electric motorbike," taking inspiration from the Yamaha SR400. The AI-generated side profile was imported as a canvas into Autodesk Fusion. The digital model was constructed using form tools, splines, and extruded cuts, incorporating intricate details like embossed tire marks on the wheels and a custom battery casing engineered with a -0.02mm offset for a precise, snug mechanical fit.
                             </p>
                         </div>
                     </div>
+
+                    <!-- Block 2: Image Right, Text Left -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                             <!-- Added transform-gpu, block, and %20 for spaces -->
+                            <img src="images/emoped%205.jpg" alt="Prototyping Failures" class="w-full h-auto block object-cover transform-gpu group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">02</span> Prototyping Failures & Iteration
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Early FDM prototyping revealed several structural and mechanical flaws. Initial prints suffered from severe "spaghettiing" because the nozzle Z-axis was calibrated too high, drastically weakening layer adhesion. Subsequent print attempts experienced warping and layer shifts, likely caused by the nozzle colliding with the physical print mid-operation. Additionally, the first completed physical model featured handlebars that were too thin, causing them to break under normal handling, prompting a structural redesign.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Image Left, Text Right -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 group">
+                        <div class="md:w-1/2 overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                             <!-- Added transform-gpu, block, and %20 for spaces -->
+                            <img src="images/emoped%203.jpg" alt="Final Assembly" class="w-full h-auto block object-cover transform-gpu group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold mb-3 text-white flex items-center">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-full mr-3">03</span> Print Optimization & Assembly
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                To resolve persistent printability issues, the CAD model was split into two halves joined by internal pins and pinholes, which completely eliminated the need for major support structures. For the battery holder overhangs, organic supports were painted on to minimize material waste. The final model was printed using a 0.6mm nozzle at a 0.3mm layer height, yielding a rapid 3.35-hour production time. The surface finish was drastically improved by reducing the ironing flow rate from 15% to 10% to prevent over-extrusion, and by slowing external perimeter printing speeds to 20mm/s.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
                     <!-- Block 2: Image Right, Text Left -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8 group">
